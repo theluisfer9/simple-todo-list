@@ -1,34 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.css";
+import "./components/todo";
+import Todo from "./components/todo";
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const fakeItems = [
+    "Investigar tema de tesis",
+    "Caminar al perro",
+    "Hacer las compras",
+  ];
+  const [items, setItems] = useState(fakeItems);
+  const today = new Date();
+  // format it to "Day of the week, day of the month, month, year"
+  const date = today.toDateString();
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="content">
+      <div className="header">
+        <h2 id="date">{date}</h2>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Todo items={items} setItems={setItems} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
