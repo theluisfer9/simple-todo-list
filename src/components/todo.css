@@ -1,0 +1,19 @@
+#newItem {
+  display: block;
+  margin: 0.5em auto;
+}
+
+.btn {
+  min-width: 50px;
+  min-height: 40px;
+}
+.btn:hover {
+  background-color: #8fe3cf;
+  color: #fff;
+}
+
+.last-item {
+  margin: 2% 0;
+  border: thick solid #8fe3cf;
+  padding: 2%;
+}

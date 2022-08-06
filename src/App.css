@@ -1,0 +1,50 @@
+.header {
+  color: #fff;
+  background-color: #256d85;
+  text-align: center;
+  width: 40%;
+  height: auto;
+  margin: 5% auto 0;
+  z-index: 3;
+}
+#date {
+  font-weight: 800;
+  font-size: 2em;
+  padding: 0.5em;
+  margin-bottom: 0;
+}
+
+.todo {
+  text-align: center;
+  margin: 0 auto;
+  width: 40%;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 0px;
+  min-height: 30vh;
+}
+
+.list {
+  margin-top: 0;
+  padding: 2%;
+  list-style-type: none;
+}
+.item:not(:last-of-type) {
+  margin: 2% 0;
+  border: thick double #256d85;
+  padding: 2%;
+}
+.item:hover:not(:last-of-type) {
+  background-color: #256d85;
+  color: #fff;
+  cursor: pointer;
+}
+
+.crossed {
+  background-color: #256d85;
+}
+.crossed:hover:not(:last-of-type) {
+  background-color: #2b4865;
+  color: #fff;
+  cursor: pointer;
+}
